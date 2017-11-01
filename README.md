@@ -13,6 +13,10 @@ This is the project repo for the final project of the Udacity Self-Driving Car N
   * @jzhang  wszjzhang@gmail.com  Traffic Light Classifier
   * @lacfo  liyuanlacfo1990@gmail.com  planning
 
+### Project Structure
+![alt text](./final-project-ros-graph-v2.png)
+
+
 ### Native Installation
 
 * Be sure that your workstation is running Ubuntu 16.04 Xenial Xerus or Ubuntu 14.04 Trusty Tahir. [Ubuntu downloads can be found here](https://www.ubuntu.com/download/desktop).
