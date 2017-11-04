@@ -106,18 +106,18 @@ class WaypointUpdater(object):
                     speed = 0
                     decel = 0
                     rospy.logwarn("Stopped")
-                for wp in final_waypoints:
+                for wp in self.final_waypoints:
                     speed = max(0, speed - decel)
                     self.set_waypoint_velocity(wp, speed)
             else:
                 speed = self.current_velocity
-                if speed < self.max_speed:
+                if speed < self.max_velocity:
                     rospy.logwarn("Accelerating to top speed again...")
                 for wp in self.final_waypoints:
-                    if speed > self.max_speed:              
-                        speed = max(self.max_speed, speed-ACCEL)
+                    if speed > self.max_velocity:              
+                        speed = max(self.max_velocity, speed-ACCEL)
                     else:
-                        speed = min(self.max_speed, speed+ACCEL)
+                        speed = min(self.max_velocity, speed+ACCEL)
                     self.set_waypoint_velocity(wp, speed)
 
 
